@@ -1,39 +1,59 @@
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f2f2f2;
+    color: #333;
+    padding-top: 80px;
+}
+
 header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
     display: flex;
     align-items: center;
     justify-content: space-between; 
     background-color: #f5f5f5;
     padding: 10px 30px;
-    border-bottom: 1px solid #ddd;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    transition: top 0.3s ease-in-out;
 }
+
+.header-animation {
+    top: -100px;
+}
+
 .logo-conteiner{
     display: flex;
     align-items: center;
     gap: 10px;
+    margin-left: 77px;
 }
 
 .logo-conteiner img {
-    width: 40px;
-    height: 40px;
+    width: 80px;
+    height: 80px;
     object-fit: contain;
 }
 .logo-conteiner span {
-    font-size: 16px;
-    color: #333;
-    font-weight: 600;
-}
-
-body {
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: #ccc;
+    font-size: 20px;
+    color: #026C4C;
+    font-weight: 400;
 }
 
 nav {
     margin-left: auto;
     margin-right: auto;
     display: flex;
-    gap: 15px;
+    gap: 25px;
     width: max-content;
   }
   
@@ -48,19 +68,19 @@ nav ul {
 
 nav ul li a {
     text-decoration: none;
-    color: #444;
-    font-size: 14px;
+    color: #026C4C;
+    font-size: 20px;
     font-weight: 500;
     transition: color 0.3s ease;
 }
 
 nav ul li a:hover {
-    color: #28a745;
+    color: #06D496;
 }
 
 main {
-    max-width: 1000px;
-    margin: 0 auto;
+    max-width: 1100px;
+    margin: 40px auto;
     padding: 0 20px;
     display: flex;
     gap: 40px;
@@ -76,7 +96,7 @@ main {
 .principal h1 {
     font-size: 2.5rem;
     font-weight: 900;
-    background: linear-gradient(180deg, #2fae35, #7fbd28);
+    background: linear-gradient(180deg, #06D496, #026C4C);
     background-clip: text;            
     -webkit-background-clip: text;    
     -webkit-text-fill-color: transparent;
@@ -87,12 +107,16 @@ main {
 .principal p {
     font-size: 16px;
     margin-bottom: 25px;
-    color: #2fae35;
+    background: linear-gradient(230deg, #06D496, #026C4C);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
+
 
 .btn-formulario {
     display: inline-block;
-    background-color: #7fbd28;
+    background-color: #028D72;
     color: white;
     padding: 12px 28px;
     font-weight: 700;
@@ -103,7 +127,7 @@ main {
 }
 
 .btn-formulario:hover {
-    background-color: #095a2b;
+    background-color: #06D496;
 }
 
 .grupo {
@@ -114,10 +138,71 @@ main {
 .grupo img {
     width: 100%;
     border-radius: 0;
-    box-shadow: 0 5px 15px #0000001a;
+    box-shadow: 0 4px 12px #0000001a;
     object-fit: cover;
     display: block;
 }
+
+/* Informações */
+
+.infos {
+    background: #078A71;
+    padding: 60px 40px;
+    display: flex;
+    justify-content: center;
+}
+
+.infos ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    max-width: 1046px;
+    width: 100%;
+}
+
+.infos ul li {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 10px 10px;
+    color: white;
+    font-size: 16px;
+    line-height: 1.5;
+    font-weight: 400;
+    border-bottom: 2px solid white;
+}
+
+.infos ul li:first-child {
+    padding-top: 10px;
+    padding-bottom: 15px;
+}
+
+.infos ul li:last-child {
+    border-bottom: none;
+}
+
+.infos ul li img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+    filter: brightness(0) invert(1); 
+}
+
+.infos ul li img:hover {
+    transform: scale(1.1);
+}
+
+.infos ul li p {
+    margin: 0;
+    color: white;
+    font-size: 18px;
+    font-weight: 300;
+}
+
+/* Seção Parceiros */
 
 .parceiros {
     max-width: 900px;
@@ -158,45 +243,7 @@ main {
     margin-bottom: 8px; 
 }
 
-.infos {
-    background: linear-gradient(180deg, #2fae35, #7fbd28);
-    color: white;
-    padding: 30px 40px;
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-}
-
-.infos .item {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-}
-
-.infos ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-}
-
-.infos ul li{
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    margin-bottom: 20px;
-}
-
-.infos .item img {
-    stroke: white;
-    width: 40px;
-    height: 40px;
-}
-
-.infos ul li p {
-    margin: 0;
-}
-
-
+/* Footer */
 footer {
     background-color: #f5f5f5;
     text-align: center;
@@ -208,14 +255,30 @@ footer {
     margin-top: 50px;
   }
   
-@media (max_width: 600px) {
+/* Responsivo */
+@media (max-width: 768px) {
     header {
         flex-direction: column;
         gap: 15px;
+        text-align: center;
     }
+
     nav ul {
-        gap: 15px;
         flex-wrap: wrap;
         justify-content: center;
+    }
+
+    main {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .grupo,
+    .principal {
+        max-width: 100%;
+    }
+
+    .infos {
+        padding: 30px 20px;
     }
 }
