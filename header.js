@@ -11,6 +11,22 @@ window.addEventListener("scroll", () => {
   }
 
   ultimoScroll = scrollAtual;
+
+  const links = document.querySelectorAll("nav ul li a");
+  const scrollYComOffset = scrollAtual + 150;
+
+  links.forEach((link) => {
+    const section = document.querySelector(link.getAttribute("href"));
+    if (section) {
+      const top = section.offsetTop;
+      const bottom = top + section.offsetHeight;
+
+      if (scrollYComOffset >= top && scrollYComOffset < bottom) {
+        links.forEach((l) => l.classList.remove("active"));
+        link.classList.add("active");
+      }
+    }
+  });
 });
 
 window.addEventListener("DOMContentLoaded", function () {

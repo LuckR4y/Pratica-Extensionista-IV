@@ -18,17 +18,19 @@
       </div>
       <nav>
         <ul>
-          <li><a href="#">Inicio</a></li>
-          <li><a href="#">Sobre</a></li>
-          <li><a href="#">Inscrição</a></li>
-          <li><a href="#">Contato</a></li>
-          <li><a href="#">Parceiros</a></li>
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#inscricao">Inscrição</a></li>
+          <li><a href="#local">Local</a></li>
+          <li><a href="#projetos">Projetos</a></li>
+          <li><a href="#contato">Contato</a></li>
+          <li><a href="#parceiros">Parceiros</a></li>
         </ul>
       </nav>
     </header>
 
     <main>
-      <section class="principal">
+      <section class="principal" id="inicio">
         <h1>Lorem, ipsum dolor sit amet consectetur <br />adipisicing.</h1>
         <p>
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum quidem
@@ -75,7 +77,7 @@
       </ul>
     </section>
 
-    <section class="objetivo">
+    <section class="objetivo" id="sobre">
       <h2>Sobre nosso objetivo</h2>
 
       <div class="bloco-objetivo">
@@ -114,7 +116,7 @@
       </div>
     </section>
 
-    <section class="inscricao">
+    <section class="inscricao" id="inscricao">
       <div class="blur">
         <img src="Foto inscrição.jpg" alt="Foto com efeito blur" />
         <div class="conteudo-inscricao">
@@ -132,7 +134,7 @@
       </div>
     </section>
 
-    <section class="local">
+    <section class="local" id="local">
       <div class="container-local">
         <img src="Icon mapa (2).png" alt="ícone" class="icon-local" />
         <div class="texto-local">
@@ -156,7 +158,7 @@
       </div>
     </section>
 
-    <section class="projeto">
+    <section class="projeto" id="projetos">
       <h2 class="titulo">Alguns dos nossos projetos</h2>
       <div class="carrossel-container">
         <button class="nav destaque-prev">&#10094;</button>
@@ -255,7 +257,6 @@
         <span class="indicador" onclick="irParaSlide(4)"></span>
       </div>
 
-      <!-- Modal -->
       <div class="modal" id="modal-projeto" onclick="fecharModal(event)">
         <div class="modal-conteudo" onclick="event.stopPropagation();">
           <span class="fechar" onclick="fecharModalDireto()">&times;</span>
@@ -266,14 +267,21 @@
       </div>
     </section>
 
-    <section aria-labelledby="titulo-parceiros" class="Parceiros">
+    <section class="membros">
+
+    </section>
+
+    <section class="parceiros" id="parceiros">
       <h2 id="titulo-parceiros">Nossos Parceiros</h2>
       <ul class="lista-parceiros">
-        <li><img src="#" alt="Foto futura" /></li>
-        <li><img src="#" alt="Foto futura" /></li>
-        <li><img src="#" alt="Foto futura" /></li>
-        <li><img src="#" alt="Foto futura" /></li>
-        <li><img src="#" alt="Foto futura" /></li>
+        <li><img src="logo prefeitura.jpg" alt="prefeitura Santa Rosa de Viterbo" /></li>
+        <li><img src="Logo Chiaperini 2.jpg" alt="Chiaperini" /></li>
+        <li><img src="logo primient.jpg" alt="Primient- Primary Products Ingredients Americas LLC " /></li>
+        <li><img src="Logo trilhos.png" alt="Santa Rosa nos Trilhos" /></li>
+        <li><img src="logo faesp.jpg" alt="Faesp" /></li>
+        <li><img src="logo senar.png" alt="Senar- Serviço Nacional de Aprendizagem Rural" /></li>
+        <li><img src="Logo penha.png" alt="A Ruralista agropecuária- A loja da Penha" /></li>
+
       </ul>
     </section>
 
